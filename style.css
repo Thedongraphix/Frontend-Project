@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+}
+.background {
+    background: url('black\ aesthetic.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 13%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    justify-content: flex-start;
+}
+
+.navbar {
+    flex-grow: 1;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    bottom: -5px;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.navbar a:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.search-bar {
+    width: 250px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    right: 13%;
+    padding-left: 10px; /* Add padding to ensure space within the input */
+}
+
+.search-bar input {
+    width: calc(100% - 50px); /* Adjust width to consider button size and padding */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.search-bar button {
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove additional padding */
+}
+
+.search-bar input::placeholder {
+    color: #fff;
+}
+
+.search-bar button i {
+    font-size: 22px;
+    margin-left: 2px;
+}
+.container{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background: url('black\ aesthetic.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:75%;
+    height:450px;
+    margin-top:20px;
+    background-color: aquamarine;
+    border-radius:25px;
+}
+
+.item{
+    position:absolute;
+    top:0;
+    left:0;
+    width:58%;
+    height:100%;
+    color:#ffff;
+    background:transparent;
+    padding:80px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+}
+.item.logo{
+    color:#fff;
+    font-size: 33px; 
+}
+.text-item h2{
+    font-size: 10px;
+    align-items: center;
+    margin-left:8px;
+
+}
+.text-item p{
+    font-size:100px;
+    margin:20px 0;
+}
+.social-icons a{
+    color:#fff;
+    margin-right: 20px;
+    font-size: 24px;
+    cursor:pointer;
+    transition: .3s;
+    text-decoration: none;
+    display: inline-block;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform:translateY(-5px)
+}
+.container .login-section{
+    position: absolute;
+    top:0;
+    right:0;
+    width:calc(100% - 58%);
+    color:#fff;
+    height: 100%;
+}
+.login-section.form-box{
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    height:70%;
+}
+.login-section .form-box h2{
+   text-align: center;
+   font-size: 24px;
+   font-weight: 600;
+   margin-bottom:1px;
+   margin-left:-58px ;
+   margin-top: 23px;
+}
+.form-box .input-box{
+  width:340px;
+  height:50px;
+  background:transparent;
+  border-bottom: 2px solid #fff;
+  margin:30px 0;
+  position:relative;
+}
+.input-box input{
+    width:100%;
+    height:100%;
+    background: transparent;
+    border:none;
+    outline: none;
+    color:#fff;
+    font-size: 16px;
+    padding-right: 28px;
+}
+.input-box label{
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight:600px;
+    pointer-events: none;
+    transition: .5s ease;
+}
+.input-box  .icon{
+    position:absolute;
+    top:13px;
+    right:0;
+    width:20px;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
+}
+.remember-password{
+    font-size: 14px;
+    font-weight: 500;
+    color:#fff;
+    margin: -15px 0 15px;
+}
+.remember-password label input{
+    accent-color:#fff;
+    margin-right:4px;
+    top:2px;
+}
+.remember-password a{
+   color: #fff;
+   padding: 35px 17px; 
+   text-decoration: none;
+   justify-content: space-between;
+   margin-left:68px;
+   
+
+    
+}
+.remember-password a:hover{
+    text-decoration: underline;
+}
+.btn{
+    background: #fff;
+    width: 75%;
+    height:45px;
+    border:none;
+    outline: none;
+    border-radius:25px;
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: 500;
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.4);
+    justify-content: center;
+}
+.create-account{
+    font-size:14.4px;
+    font-weight: 500;
+    margin:25px;
+
+}
+.create-account  p a {
+    color:#fff;
+    font-weight: 600px;
+    text-decoration: none;
+    text-align: center;
+}
+.create-account  p a:hover{
+   text-decoration: underline;
+}
+.login-section .form-box.register{
+    transform: translateX(430px);
+    transition: transform .6s ease;
+    transition-delay: 0s;
+}
+.login-section.active .form-box.register{
+    transform: translateX(0px);
+    transition-delay: .7s;
+}
+
+.login-section .form-box.login{
+    transform: translateX(0px);
+    transition: transform .6s ease;
+    transition-delay: 0.7s;
+}
+.login-section.active .form-box.login{
+    transform: translateX(430px);
+    transition-delay: 0s;
+}               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
